@@ -1,0 +1,7 @@
+﻿<Placement>
+	<Place Parts_HttpMp3Track_Edit="Content:1"/>
+	<Place Parts_HttpMp3Track="Content:1"/>
+  <Match DisplayType="SummaryAdmin">
+    <Place Parts_HttpMp3Track="-"/>
+  </Match>
+</Placement>

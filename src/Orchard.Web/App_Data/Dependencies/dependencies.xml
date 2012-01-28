@@ -25,6 +25,12 @@
     <References />
   </Dependency>
   <Dependency>
+    <ModuleName>Contrib.HttpMp3Track</ModuleName>
+    <VirtualPath>~/Modules/Contrib.HttpMp3Track/bin/Contrib.HttpMp3Track.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <References />
+  </Dependency>
+  <Dependency>
     <ModuleName>Contrib.MediaPickerField</ModuleName>
     <VirtualPath>~/Modules/Contrib.MediaPickerField/bin/Contrib.MediaPickerField.dll</VirtualPath>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
@@ -110,6 +116,35 @@
         <Name>MarkdownSharp</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Markdown/bin/MarkdownSharp.dll</VirtualPath>
+      </Reference>
+    </References>
+  </Dependency>
+  <Dependency>
+    <ModuleName>Orchard.Media</ModuleName>
+    <VirtualPath>~/Modules/Orchard.Media/bin/Orchard.Media.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>ICSharpCode.SharpZipLib</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.jPlayer/bin/ICSharpCode.SharpZipLib.dll</VirtualPath>
+      </Reference>
+    </References>
+  </Dependency>
+  <Dependency>
+    <ModuleName>Mello.ImageGallery</ModuleName>
+    <VirtualPath>~/Modules/Mello.ImageGallery/Mello.ImageGallery.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>ICSharpCode.SharpZipLib</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.jPlayer/bin/ICSharpCode.SharpZipLib.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Media</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Media/bin/Orchard.Media.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -208,22 +243,15 @@
     <References />
   </Dependency>
   <Dependency>
-    <ModuleName>Orchard.Media</ModuleName>
-    <VirtualPath>~/Modules/Orchard.Media/bin/Orchard.Media.dll</VirtualPath>
+    <ModuleName>Orchard.jPlayer</ModuleName>
+    <VirtualPath>~/Modules/Orchard.jPlayer/bin/Orchard.jPlayer.dll</VirtualPath>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
       <Reference>
         <Name>ICSharpCode.SharpZipLib</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Media/bin/ICSharpCode.SharpZipLib.dll</VirtualPath>
+        <VirtualPath>~/Modules/Orchard.jPlayer/bin/ICSharpCode.SharpZipLib.dll</VirtualPath>
       </Reference>
-    </References>
-  </Dependency>
-  <Dependency>
-    <ModuleName>Orchard.jPlayer</ModuleName>
-    <VirtualPath>~/Modules/Orchard.jPlayer/Orchard.jPlayer.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
-    <References>
       <Reference>
         <Name>Orchard.Media</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
@@ -257,7 +285,7 @@
       <Reference>
         <Name>ICSharpCode.SharpZipLib</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Media/bin/ICSharpCode.SharpZipLib.dll</VirtualPath>
+        <VirtualPath>~/Modules/Orchard.jPlayer/bin/ICSharpCode.SharpZipLib.dll</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Media</Name>
