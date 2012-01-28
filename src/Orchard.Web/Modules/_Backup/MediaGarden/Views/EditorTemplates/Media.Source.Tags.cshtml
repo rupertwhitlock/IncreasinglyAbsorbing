@@ -1,0 +1,10 @@
+﻿@model MediaGarden.Sources.ViewModels.TagsModel
+@{
+    /* Tags edit per source import
+     */
+}
+    <div>
+        @Html.LabelFor(m=>m.Tags, @T("Tags"))
+        @Html.TextBoxFor(m => m.Tags, new { title = @T("Tags for the media item") })
+        @Html.ValidationMessageFor(m => m.Tags,"*")
+    </div>

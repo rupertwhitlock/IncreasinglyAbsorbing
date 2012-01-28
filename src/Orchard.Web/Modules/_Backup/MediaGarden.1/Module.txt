@@ -1,0 +1,18 @@
+Name: Media Garden
+AntiForgery: enabled
+Author: Media Garden Team
+Website: http://orchardmediagarden.codeplex.com
+Version: 0.8.9
+OrchardVersion: 1.1.30
+Description: Media framework core module designed for extensibility
+Features:
+    MediaGarden:
+		Name: Media Garden
+        Description: Core media framework features
+		Category: Media
+		Dependencies: Orchard.Media, Orchard.MediaPicker, Orchard.jQuery, Downplay.Origami, Orchard.Tags
+    MediaGarden.Defaults:
+		Name: Media Garden Defaults
+		Description: Default and fallback media handlers
+		Category: Media
+		Dependencies: MediaGarden

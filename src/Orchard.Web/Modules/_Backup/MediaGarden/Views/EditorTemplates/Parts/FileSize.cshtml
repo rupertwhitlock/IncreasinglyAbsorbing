@@ -1,0 +1,12 @@
+@model MediaGarden.Models.FileSizePart
+@using Orchard.ContentManagement;
+
+<fieldset>
+    <legend>@T("File Size")</legend>
+        <div>
+            @Html.LabelFor(m => m.Size, @T("Size"))
+            @Html.EditorFor(m => m.Size)
+            @Html.ValidationMessageFor(m => m.Size, "*")
+        </div>
+</fieldset>
+

@@ -1,0 +1,24 @@
+﻿@model MediaGarden.Sources.ViewModels.SourceFormatViewModel
+@{
+    /* Format selector per source import */
+}
+    <div class="media-source-data-stereotype">
+        @Html.LabelFor(m=>m.Stereotype, @T("Media type"))
+        @Html.DropDownListFor(m => m.Stereotype, Model.Stereotypes,new { title = @T("General type of media") })
+        @Html.ValidationMessageFor(m => m.Stereotype, "*")
+    </div>
+    <div>
+        @Html.LabelFor(m=>m.ContentTypeName, @T("Content type"))
+        @Html.DropDownListFor(m=>m.ContentTypeName, Model.ContentTypes)
+        @Html.ValidationMessageFor(m => m.ContentTypeName,"*")
+    </div>
+    <div>
+        @Html.LabelFor(m=>m.FormatName, @T("Media format"))
+        @Html.DropDownListFor(m=>m.FormatName, Model.Formats)
+        @Html.ValidationMessageFor(m => m.FormatName,"*")
+    </div>
+    <div>
+        @Html.LabelFor(m=>m.ViewerName, @T("Viewer"))
+        @Html.DropDownListFor(m=>m.ViewerName, Model.Viewers)
+        @Html.ValidationMessageFor(m => m.ViewerName,"*")
+    </div>

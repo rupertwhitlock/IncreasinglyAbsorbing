@@ -1,0 +1,13 @@
+Name: Origami
+AntiForgery: enabled
+Author: Pete Hurst, Downplay Design
+Website: http://scienceproject.codeplex.com/wikipage?title=Origami
+Version: 0.9.0
+OrchardVersion: 1.1.30
+Description: Shape folding API
+Category: Science
+Features:
+    Downplay.Origami:
+		Name: Origami
+        Description: Shape folding API
+		Category: Science

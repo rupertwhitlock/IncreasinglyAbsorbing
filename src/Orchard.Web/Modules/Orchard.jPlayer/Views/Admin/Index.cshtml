@@ -1,0 +1,43 @@
+@model Orchard.jPlayer.ViewModels.MediaGalleryIndexViewModel
+@using Orchard.Media.Extensions
+<h1>@Html.TitleForPage(T("Manage Media Galleries").ToString())</h1>
+<div class="manage">@Html.ActionLink(T("Add new Media Gallery").ToString(), "Create", new { }, new { @class = "button primaryAction" })</div>
+<fieldset>
+    <table class="items" summary="@T("This is a table of the media galleries currently available for use in your application.")">
+        <thead>
+            <tr>
+                <th>@T("Name")
+                </th>
+                <th>@T("Author")
+                </th>
+                <th>@T("Last Updated")
+                </th>
+                <th>@T("Medias")
+                </th>
+                <th>@T("Size")
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var mediaGallery in Model.MediaGalleries) {
+                <tr>
+                    <td>
+                        @Html.ActionLink(mediaGallery.Name, "Medias", new { mediaGalleryName = mediaGallery.Name })
+                    </td>
+                    <td>
+                        @mediaGallery.User
+                    </td>
+                    <td>
+                        @mediaGallery.LastUpdated
+                    </td>
+                    <td>
+                        @mediaGallery.Medias.Count()
+                    </td>
+                    <td>
+                        @mediaGallery.Size.ToFriendlySizeString()
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</fieldset>

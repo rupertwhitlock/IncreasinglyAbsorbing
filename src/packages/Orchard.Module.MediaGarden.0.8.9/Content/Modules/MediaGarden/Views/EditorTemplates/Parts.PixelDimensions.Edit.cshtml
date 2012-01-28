@@ -1,0 +1,18 @@
+@model MediaGarden.Models.PixelDimensionsPart
+@using Orchard.ContentManagement;
+
+<fieldset>
+    <legend>@T("Original Size (pixels)")</legend>
+        <div>
+            @Html.LabelFor(m => m.SizeX, @T("SizeX"))
+            @Html.EditorFor(m => m.SizeX)
+            @Html.ValidationMessageFor(m => m.SizeX, "*")
+        </div>
+        <div>
+            @Html.LabelFor(m => m.SizeY, @T("SizeY"))
+            @Html.EditorFor(m => m.SizeY)
+            @Html.ValidationMessageFor(m => m.SizeY, "*")
+        </div>
+
+</fieldset>
+

@@ -1,0 +1,4 @@
+﻿<Placement>
+    <Place Parts_MediaGallery="Content:after"/>
+    <Place Parts_MediaGallery_Edit="Content:2.5"/>
+</Placement>

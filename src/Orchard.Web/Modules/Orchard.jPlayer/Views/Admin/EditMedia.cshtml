@@ -1,0 +1,34 @@
+﻿@model Orchard.jPlayer.ViewModels.MediaEditViewModel
+@using Orchard.Media.Extensions
+@{ Style.Require("ImageGalleryAdmin"); }
+<h1>@Html.TitleForPage(T("Edit Media").ToString())</h1>
+<div class="sections clearBoth">
+    <div class="primary">
+        @* todo: make these real (including markup) *@
+        <div>
+            @* <label>@T("Dimensions: <span>500 x 375 pixels</span>")</label> *@
+            <label>@T("Size: <span>{0}</span>", Model.Media.Size.ToFriendlySizeString())</label>
+            <label>@T("Added on <span>{0}</span>", Model.Media.LastUpdated)</label>
+        </div>
+        <div>
+            <label for="embedPath">@T("Embed:")</label>
+            <input id="embedPath" class="textLarge" name="embedPath" type="text" readonly="readonly" value="&lt;img src=&quot;@Model.Media.PublicUrl&quot /&gt;" />
+            <span class="hint">@T("Copy this html to add this image to your site.")</span>
+        </div>
+        @using(Html.BeginFormAntiForgeryPost()) {
+            @Html.ValidationSummary()
+
+            <fieldset>
+                <label for="Title">@T("Title")</label>
+                @Html.TextBoxFor(o => o.Media.Title, new { Class = "textLarge" })
+                @Html.HiddenFor(o => o.MediaGalleryName)
+                @Html.HiddenFor(o => o.Media.Name)
+            </fieldset>
+            <fieldset>
+                <button class="primaryAction" type="submit" name="submit.Save" value="@T("Save")">@T("Save")</button>
+                <button type="submit" name="submit.DeleteImage" value="@T("Remove")">@T("Remove")</button>
+                @Html.ActionLink("Back", "Medias", new { mediaGalleryName = Model.MediaGalleryName }, new { Class = "button" })
+            </fieldset>
+        }
+    </div>
+</div>

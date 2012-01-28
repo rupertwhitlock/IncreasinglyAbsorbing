@@ -1,0 +1,48 @@
+﻿.media-inputs
+{
+    width:100%;
+}
+.media-inputs .media-input 
+{
+    float:left;
+    clear:none;
+    padding:10px;
+    margin:5px;
+    border:solid 1px #c9c9c9;
+}
+.source-settings
+{
+    clear:both;
+}
+
+.media-source 
+{
+    padding:10px;
+    margin:5px;
+    border:solid 1px #c9c9c9;
+}
+
+.media-source .zone-selector 
+{
+    float:left;
+}
+.media-source .zone-preview
+{
+    float:left;
+}
+.media-source .zone-data
+{
+    float:left;
+}
+.media-source .zone-details
+{
+    float:left;
+}
+.media-source .zone-parameters
+{
+    float:left;
+}
+.media-source .clear 
+{
+    clear:both;
+}

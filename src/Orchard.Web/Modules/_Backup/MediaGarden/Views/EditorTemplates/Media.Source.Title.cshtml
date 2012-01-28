@@ -1,0 +1,10 @@
+﻿@model MediaGarden.Sources.ViewModels.TitleModel
+@{
+    /* Title edit per source import
+     */
+}
+    <div>
+        @Html.LabelFor(m=>m.Title, @T("Title"))
+        @Html.TextBoxFor(m => m.Title, new { title = @T("Title of the media item") })
+        @Html.ValidationMessageFor(m => m.Title,"*")
+    </div>

@@ -1,0 +1,14 @@
+﻿@model MediaGarden.Sources.QueryInputModel
+@{
+    /* File Upload input shape
+     * Gives us an uploader input box
+     */
+}
+<fieldset class="media-input query-text">
+    <legend>Media Query</legend>
+        <div>
+        @Html.LabelFor(m=>m.QueryText, @T("Enter Query"))
+        @Html.TextBoxFor(m => m.QueryText, new { title = @T("Type in a URL to a media file, or a local media folder or filename, or * for all media") })
+        @Html.ValidationMessageFor(m => m.QueryText,"*")
+    </div>
+</fieldset>

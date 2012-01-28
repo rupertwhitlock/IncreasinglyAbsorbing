@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Science Project dependencies (required)</Name>
+    <Description>Install dependency modules from Science Project (http://scienceproject.codeplex.com)</Description>
+    <Author>Pete Hurst</Author>
+    <WebSite>http://orchardmediagarden.codeplex.com</WebSite>
+    <Tags></Tags>
+    <Version>0.9</Version>
+  </Recipe>
+  <Module packageId="Orchard.Module.Downplay.Origami" />
+  <Feature enable="Downplay.Origami" />
+  <Migration features="*"/>
+</Orchard>

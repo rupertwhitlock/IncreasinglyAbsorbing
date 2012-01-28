@@ -1,0 +1,5 @@
+﻿@model MediaGarden.Sources.ViewModels.SourceCommandsModel
+    <div>
+        <button type="submit" id="@(Html.FieldIdFor(m=>m.CommandName))_ImportSelected" name="@Html.FieldNameFor(m => m.CommandName)" value="ImportSelected" title="@T("Click to import all the selected sources as media content items")">@T("Import Selected")</button>
+        <button type="submit" id="@(Html.FieldIdFor(m=>m.CommandName))_ImportAll" name="@Html.FieldNameFor(m => m.CommandName)" value="ImportAll" title="@T("Click to import ALL sources as media content items")">@T("Import All")</button>
+    </div>

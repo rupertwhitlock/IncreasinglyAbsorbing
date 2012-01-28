@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Media Garden - the Complete Works (optional)</Name>
+    <Description>Installs all the available modules from Media Garden: Images, Videos, Audio, Documents, and more!</Description>
+    <Author>Pete Hurst</Author>
+    <WebSite>http://orchardmediagarden.codeplex.com</WebSite>
+    <Tags></Tags>
+    <Version>0.9</Version>
+  </Recipe>
+  <Module packageId="Orchard.Module.MediaGarden.Images,Orchard.Module.MediaGarden.Videos,Orchard.Module.MediaGarden.Audio,Orchard.Module.MediaGarden.Documents" />
+  <Feature enable="MediaGarden.Images,MediaGarden.Images.Thumbnails,MediaGarden.Videos,MediaGarden.Audio,MediaGarden.Documents,MediaGarden.Documents.Attachments" />
+  <Migration features="*"/>
+</Orchard>

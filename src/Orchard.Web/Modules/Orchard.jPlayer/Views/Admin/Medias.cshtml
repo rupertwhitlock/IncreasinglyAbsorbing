@@ -1,0 +1,72 @@
+﻿@model Orchard.jPlayer.ViewModels.MediaGalleryMediasViewModel
+@using Orchard.Media.Extensions
+@{ Style.Require("MediaGalleryAdmin"); }
+@{ Script.Require("jQueryUISortable"); }
+@{ Script.Require("jQueryJSON"); }
+@{ Script.Include("Admin/Medias.js"); }
+<h1>@Html.TitleForPage(T("Manage Media Gallery").ToString())</h1>
+<div class="clearBoth">
+</div>
+@using(Html.BeginFormAntiForgeryPost()) {
+    <div class="manage">
+        @Html.ActionLink(T("Add medias").ToString(), "AddMedias", new { mediaGalleryName = Model.MediaGalleryName }, new { @class = "button primaryAction" })
+        @Html.ActionLink(T("Media Gallery Properties").ToString(), "EditProperties", new { mediaGalleryName = Model.MediaGalleryName }, new { @class = "button" })
+    </div>
+
+    <h2>@Model.MediaGalleryName</h2>
+
+    <input type="hidden" id="mediaGalleryName" name="mediaGalleryName" value="@Model.MediaGalleryName" />
+
+    <fieldset>
+        <table id="medias" class="items" summary="@T("This is a table of the medias of your media gallery.")">
+            <thead>
+                <tr>
+                    <th>
+                        &nbsp;↓
+                    </th>
+                    <th>
+                        @T("Name")
+                    </th>
+                    <th>
+                        @T("Author")
+                    </th>
+                    <th>
+                        @T("Last Updated")
+                    </th>
+                    <th>
+                        @T("Size")
+                    </th>
+                    <th>
+                        @T("Title")
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var media in Model.Medias) {
+                    <tr>
+                        <td class="sort">
+                            <img src='@Href("~/Modules/Orchard.jPlayer/Content/Images/grip.png")'  alt="grip" />
+                        </td>
+                        <td class="name">
+                            @Html.ActionLink(@media.Name, "EditMedia", new { mediaGalleryName = @Model.MediaGalleryName, mediaName = @media.Name })
+                        </td>
+                        <td>
+                            @media.User
+                        </td>
+                        <td>
+                            @media.LastUpdated
+                        </td>
+                        <td>
+                            @media.Size.ToFriendlySizeString()
+                        </td>
+                        <td>
+                            @media.Title
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </fieldset>
+
+    @Html.ActionLink("Back", "Index", null, new { Class = "button" })
+}

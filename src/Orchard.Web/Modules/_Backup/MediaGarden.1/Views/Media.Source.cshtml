@@ -1,0 +1,31 @@
+﻿@using MediaGarden.Models
+@{
+    /*
+     * This is the composition root for displaying Media Sources on the Sources page
+     */
+    IMediaSource mediaSource = Model.MediaSource;
+    IMediaItem mediaItem = Model.MediaItem;
+}
+<div class="summary media-source" itemscope="itemscope" itemid="@mediaSource.RecordId" itemtype="http://orchardmediagarden.codeplex.com/data/MediaSourceDataRecord">
+    @if (Model.Selector != null)
+    {
+        @Display(Model.Selector)
+    }
+    @if (Model.Preview != null)
+    {
+        @Display(Model.Preview)
+    }
+    @if (Model.Data != null)
+    {
+        @Display(Model.Data)
+    }
+    @if (Model.Details != null)
+    {
+        @Display(Model.Details)
+    }
+    @if (Model.Parameters != null)
+    {
+        @Display(Model.Parameters)
+    }
+    <div class="clear"></div>
+</div>

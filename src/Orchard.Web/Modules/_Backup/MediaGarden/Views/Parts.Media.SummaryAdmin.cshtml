@@ -1,0 +1,17 @@
+@using Orchard.ContentManagement;
+@{
+    // Figure out a width and height for the image. There are various ways we can do this.
+    
+    // Original image size:
+/*    Orchard.ContentManagement.ContentPart part = Model.MediaItem;
+    int width = part.As<MediaGarden.Models.PixelDimensionsPart>().SizeX;
+    int height = part.As<MediaGarden.Models.PixelDimensionsPart>().SizeY;
+  */  
+    // Fixed size:
+    int width = 150;
+    int height = 100;
+    
+    // Aspect-aware resize to fit desired area:
+    // TODO: Need some kind of helper to perform this
+}
+<div class="media">@Display.Media(MediaItem: Model.MediaItem, DisplayWidth: width, DisplayHeight: height)</div>

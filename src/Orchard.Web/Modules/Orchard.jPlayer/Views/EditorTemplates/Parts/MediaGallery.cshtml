@@ -1,0 +1,15 @@
+﻿@model Orchard.jPlayer.Models.MediaGalleryPart
+<fieldset>
+    <div>@Html.LabelFor(o => o.MediaGalleryName, @T("Media gallery"))</div>
+    @if(!Model.HasAvailableGalleries) {
+        <div>@T("You need first to create an media gallery on Media Gallery menu")</div>
+    }
+    else {
+        <div>@Html.DropDownListFor(o => o.SelectedGallery, Model.AvailableGalleries)</div>
+
+        <div>@Html.LabelFor(o => o.SelectedType, @T("Media gallery type"))</div>
+        <div>@Html.DropDownListFor(o => o.SelectedType, Model.AvailableTypes)</div>
+        <div>@Html.LabelFor(o => o.AutoPlay, @T("Auto play"))</div>
+        <div>@Html.CheckBoxFor(o => o.AutoPlay)</div>
+    }
+</fieldset>

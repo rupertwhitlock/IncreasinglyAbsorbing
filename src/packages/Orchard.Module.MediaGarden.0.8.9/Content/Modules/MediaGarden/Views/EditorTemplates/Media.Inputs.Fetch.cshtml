@@ -1,0 +1,8 @@
+﻿@model MediaGarden.ViewModels.MediaInputsViewModel
+<fieldset class="media-input fetch-inputs">
+    <legend>@T("Fetch")</legend>
+    <div>
+        <button type="submit" id="@Html.FieldIdFor(m=>m.Fetch)" name="@Html.FieldNameFor(m=>m.Fetch)" value="yes" title="@T("Click to fetch any media input locations you have supplied")">@T("Go")</button>
+        @Html.ValidationMessageFor(m => m.Fetch,"*")
+    </div>
+</fieldset>

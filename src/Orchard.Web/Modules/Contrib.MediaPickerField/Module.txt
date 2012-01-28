@@ -1,0 +1,13 @@
+Name: Media Picker Field
+AntiForgery: enabled
+Author: Sébastien Ros
+Website: http://mediapickerfield.codeplex.com
+Version: 1.2
+OrchardVersion: 1.1
+Tags: media, field
+Description: Adds a new field to select a file using the Media Picker dialog
+Features:
+    Contrib.MediaPickerField:
+        Description: Adds a new field to select a file using the Media Picker dialog
+        Dependencies: Orchard.MediaPicker
+        Category: Media

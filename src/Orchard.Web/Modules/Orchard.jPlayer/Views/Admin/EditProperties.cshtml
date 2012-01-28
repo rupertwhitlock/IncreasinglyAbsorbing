@@ -1,0 +1,17 @@
+﻿@model Orchard.jPlayer.ViewModels.MediaGalleryEditPropertiesViewModel
+<h1>@Html.TitleForPage(T("Media Gallery Properties").ToString())</h1>
+@using(Html.BeginFormAntiForgeryPost()) {
+    @Html.ValidationSummary()
+
+    <fieldset>
+        @Html.HiddenFor(o => o.MediaGallery.Name)
+        <label for="NewName">@T("Media gallery name")</label>
+        @Html.TextBox("NewName", Model.MediaGallery.Name)
+    </fieldset>
+
+    <fieldset>
+        <button class="primaryAction" type="submit" name="submit.Save" value="@T("Save")">@T("Save")</button>
+        <button type="submit" name="submit.Delete" value="@T("Remove")">@T("Remove")</button>
+        @Html.ActionLink("Back", "Medias", new { mediaGalleryName = Model.MediaGallery.Name }, new { Class = "button" })
+    </fieldset>
+}

@@ -1,0 +1,19 @@
+﻿.section-content {
+    background:#2b2b2b;
+    border:1px solid #404040;
+    padding:6px 0;
+    
+     /*CSS3 properties*/
+     -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+      border-radius: 2px;
+      box-shadow: inset 0px 0px 1px rgba(64, 64, 64, 1.0), 1px 1px 1px rgba(54, 54, 65, 1.0);
+     -webkit-box-shadow: inset 0px 0px 1px rgba(64, 64, 64, 1.0), 1px 1px 1px rgba(54, 54, 65, 1.0); 
+     -moz-box-shadow: inset 0px 0px 1px rgba(64, 64, 64, 1.0), 1px 1px 1px rgba(54, 54, 65, 1.0);
+}
+.navicon-media-garden {
+background-image:url(images/menu.media.png) !important;
+}
+.navicon-media-garden:hover {
+background-position:0 -30px !important;
+}

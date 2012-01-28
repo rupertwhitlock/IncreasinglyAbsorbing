@@ -1,0 +1,39 @@
+<Placement>
+  <Place Media="Content:4"/>
+  <Place Parts_Media_SummaryAdmin="-"/>
+  <Place Parts_Media_Summary="-"/>
+  <Place Parts_MediaLength="Metadata:3"/>
+  <Place Parts_PixelDimensions="Metadata:4"/>
+  <Place Parts_PixelDimensions_Edit="Content:10"/>
+  <Place Parts_FileSize="Metadata:5"/>
+  <Place Parts_Media_Edit="Content:5"/>
+  <Match DisplayType="Detail">
+    <Place Parts_Media="Content:5"/>
+    <Place Parts_Media_Embed="Content:5.1"/>
+  </Match>
+  <Match DisplayType="Summary">
+    <Place Parts_Media="-"/>
+    <Place Parts_Media_Summary="Content:5"></Place>
+  </Match>
+  <Match DisplayType="SummaryAdmin">
+    <Place Parts_Media="-"/>
+    <Place Parts_Media_SummaryAdmin="Content:5"></Place>
+  </Match>
+  <Match DisplayType="SummaryAdminConnector">
+    <Place Parts_Media="-"></Place>
+    <Place Parts_Media_SummaryAdmin="Content:5"></Place>
+  </Match>
+    <Place Media_Source_Title="Content:1"></Place>
+  <!-- Placement for shapes built with Origami -->
+  <Place Media_Inputs_FileUpload="Inputs:10"></Place>
+  <Place Media_Inputs_Query="Inputs:5"></Place>
+  <Place Media_Inputs_Fetch="Inputs:after"></Place>
+  <Place Media_Source="Sources:5"></Place>
+  <Place Media_Source_Format="Data:5"></Place>
+  <Place Media_Source_Title="Details:5"></Place>
+  <Place Media_Source_Tags="Details:6"></Place>
+  <Place Media_Source_Url="Details:8"></Place>
+  <Place Media_Source_Selector="Selector:5"></Place>
+  <Place Media_Source_Preview="Preview:5"></Place>
+  <Place Media_Actions_Sources="Actions:5"></Place>
+</Placement>

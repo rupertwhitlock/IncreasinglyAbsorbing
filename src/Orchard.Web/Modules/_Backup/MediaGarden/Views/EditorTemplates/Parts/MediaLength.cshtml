@@ -1,0 +1,12 @@
+@model MediaGarden.Models.MediaLengthPart
+@using Orchard.ContentManagement;
+
+<fieldset>
+    <legend>@T("Media Length")</legend>
+        <div>
+            @Html.LabelFor(m => m.Length, @T("Length"))
+            @Html.EditorFor(m => m.Length)
+            @Html.ValidationMessageFor(m => m.Length, "*")
+        </div>
+</fieldset>
+

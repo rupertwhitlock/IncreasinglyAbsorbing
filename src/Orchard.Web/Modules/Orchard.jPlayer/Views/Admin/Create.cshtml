@@ -1,0 +1,13 @@
+@model Orchard.jPlayer.ViewModels.CreateGalleryViewModel
+<h1>@Html.TitleForPage(T("Create new Media Gallery").ToString())</h1>
+@using(Html.BeginFormAntiForgeryPost()) {
+    @Html.ValidationSummary()
+    <fieldset>
+        <label for="GalleryName">@T("Media Gallery Name")</label>
+        <input type="text" name="GalleryName" class="textMedium" />
+    </fieldset>
+    <fieldset>
+        <button class="primaryAction" type="submit">@T("Save")</button>
+        @Html.ActionLink("Back", "Index", null, new { Class = "button" })
+    </fieldset>
+}

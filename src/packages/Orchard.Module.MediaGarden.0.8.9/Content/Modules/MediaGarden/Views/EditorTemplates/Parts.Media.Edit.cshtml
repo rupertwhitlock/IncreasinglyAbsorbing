@@ -1,0 +1,27 @@
+@model MediaGarden.Models.MediaPart
+@using Orchard.ContentManagement;
+
+<fieldset>
+    <legend>@T("Media details")</legend>
+        <div>
+            @Html.LabelFor(m => m.Url, @T("Url"))
+            @Html.EditorFor(m => m.Url)
+            @Html.ValidationMessageFor(m => m.Url, "*")
+        </div>
+      @*  <div>
+            @Html.LabelFor(m => m.Source.Title, @T("Source Title"))
+            @Html.EditorFor(m => m.Source.Title)
+            @Html.ValidationMessageFor(m => m.Source.Title, "*") 
+        </div>*@
+        <div>
+            @Html.LabelFor(m => m.ViewerName, @T("RendererName"))
+            @Html.EditorFor(m => m.ViewerName)
+            @Html.ValidationMessageFor(m => m.ViewerName, "*")
+        </div>
+        <div>
+            @Html.LabelFor(m => m.FormatName, @T("FormatName"))
+            @Html.EditorFor(m => m.FormatName)
+            @Html.ValidationMessageFor(m => m.FormatName, "*")
+        </div>
+
+</fieldset>

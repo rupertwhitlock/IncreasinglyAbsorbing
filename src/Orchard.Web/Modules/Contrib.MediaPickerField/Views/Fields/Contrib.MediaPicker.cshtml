@@ -1,0 +1,19 @@
+﻿@using Orchard.Utility.Extensions;
+
+@{
+    string name = Model.ContentField.Name;  
+}
+<p class="media-picker-field media-picker-field-@name.HtmlClassify()">
+    <span class="name">@name.CamelFriendly() :</span>
+    <span class="value">@Model.ContentField.Url</span>
+</p>
+
+@* Other available properties *@
+@* 
+    Alternate Text: @Model.ContentField.AlternateText
+    Class: @Model.ContentField.Class
+    Style: @Model.ContentField.Style
+    Alignment @Model.ContentField.Alignment
+    Width: @Model.ContentField.Width
+    Height: @Model.ContentField.Height
+*@

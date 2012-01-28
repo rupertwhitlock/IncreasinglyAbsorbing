@@ -1,0 +1,9 @@
+Name: jPlayer
+AntiForgery: enabled
+Author: Luiz Adilson
+Website: http://orchardjplayer.codeplex.com
+Version: 1.0.1
+OrchardVersion: 1.1.3
+Description: HTML5 Audio & Video for jQuery
+Category: Media
+Dependencies: Orchard.Media, Orchard.jQuery        

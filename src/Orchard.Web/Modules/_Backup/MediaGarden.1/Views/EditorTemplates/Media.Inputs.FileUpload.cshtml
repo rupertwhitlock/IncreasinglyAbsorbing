@@ -1,0 +1,20 @@
+﻿@model MediaGarden.Sources.FileSystem.FileUploadInputModel
+@{
+    /* File Upload input shape
+     * Gives us an uploader input box
+     */
+}
+@{ Script.Require("jQueryMultiFile").AtHead(); }
+<fieldset class="media-input file-upload">
+    <legend>Upload File(s)</legend>
+    <div>
+        @Html.LabelFor(m=>m.MediaPath, @T("Upload to Path"))
+        @Html.TextBoxFor(m => m.MediaPath)
+        @Html.ValidationMessageFor(m => m.MediaPath,"*")
+    </div>
+    <div>
+        @Html.Label(Html.FieldIdFor(m=>m.UploadFiles),T("Choose file(s)").Text)
+        <input id="@Html.FieldIdFor(m=>m.UploadFiles)" name="@Html.FieldNameFor(m=>m.UploadFiles)" class="multi" type="file" value="@T("Browse")" size="64"/>
+        @Html.ValidationMessageFor(m => m.UploadFiles, "*")
+    </div>
+</fieldset>
