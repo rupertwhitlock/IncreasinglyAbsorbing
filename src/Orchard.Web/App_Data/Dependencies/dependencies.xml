@@ -133,8 +133,8 @@
   </Dependency>
   <Dependency>
     <ModuleName>Mello.ImageGallery</ModuleName>
-    <VirtualPath>~/Modules/Mello.ImageGallery/Mello.ImageGallery.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Mello.ImageGallery/bin/Mello.ImageGallery.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
       <Reference>
         <Name>ICSharpCode.SharpZipLib</Name>

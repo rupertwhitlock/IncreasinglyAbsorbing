@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Orchard.ContentManagement;
 using Orchard.Data;
 using Rupert.GetMeThatRecord.Models;
 
-namespace Rupert.GetMeThatRecord.Service
+namespace Rupert.GetMeThatRecord.Services
 {
     public class ThatRecordService : IThatRecordService
     {

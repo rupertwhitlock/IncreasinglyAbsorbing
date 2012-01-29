@@ -8,17 +8,21 @@ using HtmlAgilityPack;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Drivers;
 using Rupert.GetMeThatRecord.Models;
-using Rupert.GetMeThatRecord.Service;
+using Rupert.GetMeThatRecord.Services;
 
 namespace Rupert.GetMeThatRecord.Drivers
 {
     public class ThatRecordPartDriver : ContentPartDriver<ThatRecordPart>
     {
         private readonly IThatRecordService _thatRecordService;
-        
+        private readonly IRecordWebsiteTrackSamplesService _recordWebsiteTrackSamplesService;
 
-        public ThatRecordPartDriver(IThatRecordService thatRecordService) {
+
+        public ThatRecordPartDriver(
+            IThatRecordService thatRecordService,
+            IRecordWebsiteTrackSamplesService recordWebsiteTrackSamplesService) {
             _thatRecordService = thatRecordService;
+            _recordWebsiteTrackSamplesService = recordWebsiteTrackSamplesService;
         }
 
         protected override string Prefix
@@ -46,10 +50,8 @@ namespace Rupert.GetMeThatRecord.Drivers
 
         protected override DriverResult Editor(ThatRecordPart part, IUpdateModel updater, dynamic shapeHelper) {
             if(updater.TryUpdateModel(part, Prefix, null, null)) {
-                var web = new HtmlWeb();
-                var htmlDoc = web.Load(part.RecordUrl); 
-                var soundsSamples = htmlDoc.DocumentNode.SelectNodes("//div[@id='vpSoundSamples']/a[@href]");
-                var soundSampleUrls = soundsSamples.Select(x => Regex.Match(x.Attributes["href"].Value, "http://[0-9./a-zA-z]+.mp3").Value);
+                
+                var soundSampleUrls = _recordWebsiteTrackSamplesService.ExtractTracksFromUrl(part);
 
                 if(part.ContentItem.Id != 0) {
                     _thatRecordService.UpdateTracksForThatRecord(

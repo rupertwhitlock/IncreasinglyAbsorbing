@@ -67,6 +67,7 @@
     <Content Include="Styles\Web.config" />
     <Content Include="Properties\AssemblyInfo.cs" />
     <Content Include="Module.txt" />
+    <Content Include="Xml\RecordWebsites.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
@@ -80,20 +81,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drivers\ThatRecordPartDriver.cs" />
+    <Compile Include="Enums\RecordWebsite.cs" />
+    <Compile Include="Factories\TrackSampleExtractorFactory.cs" />
     <Compile Include="Handlers\ThatRecordPartHandler.cs" />
     <Compile Include="Migrations.cs" />
     <Compile Include="Models\ThatRecordPart.cs" />
     <Compile Include="Models\ThatRecordPartRecord.cs" />
     <Compile Include="Models\ThatRecordTrackRecord.cs" />
     <Compile Include="Models\TrackRecord.cs" />
-    <Compile Include="Service\IThatRecordService.cs" />
-    <Compile Include="Service\ThatRecordService.cs" />
+    <Compile Include="Repositories\IRecordWebsiteRepository.cs" />
+    <Compile Include="Repositories\RecordWebsiteRepository.cs" />
+    <Compile Include="Services\IRecordWebsiteTrackSamplesService.cs" />
+    <Compile Include="Services\IThatRecordService.cs" />
+    <Compile Include="Services\ITrackSampleExtractor.cs" />
+    <Compile Include="Services\RecordWebsiteTrackSamplesService.cs" />
+    <Compile Include="Services\RedeyeTrackSampleExtractor.cs" />
+    <Compile Include="Services\ThatRecordService.cs" />
+    <Compile Include="Settings\ThatRecordPartSettings.cs" />
+    <Compile Include="Settings\ThatRecordPartSettingsHooks.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="placement.info" />
+    <None Include="placement.info">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Views\DefinitionTemplates\ThatRecordPartSettings.cshtml" />
     <None Include="Views\EditorTemplates\Parts\ThatRecord.cshtml" />
     <None Include="Views\Parts\ThatRecord.cshtml" />
   </ItemGroup>
