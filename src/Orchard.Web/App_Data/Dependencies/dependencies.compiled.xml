@@ -10,7 +10,7 @@
     <ExtensionId>Contrib.HttpMp3Track</ExtensionId>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/Contrib.HttpMp3Track/bin/Contrib.HttpMp3Track.dll</VirtualPath>
-    <Hash>490ecc444c6798c0</Hash>
+    <Hash>490ecc59d7ed2eee</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Contrib.MediaPickerField</ExtensionId>
@@ -269,6 +269,12 @@
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/Orchard.Widgets/bin/Orchard.Widgets.dll</VirtualPath>
     <Hash>dba89d436333f923</Hash>
+  </Dependency>
+  <Dependency>
+    <ExtensionId>Rupert.GetMeThatRecord</ExtensionId>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Rupert.GetMeThatRecord/bin/Rupert.GetMeThatRecord.dll</VirtualPath>
+    <Hash>926c5e981a86ca71</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>ThereAndBackAgain.WantedRecord</ExtensionId>

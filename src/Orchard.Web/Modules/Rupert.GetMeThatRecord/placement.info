@@ -1,0 +1,7 @@
+﻿<Placement>
+	<Place Parts_ThatRecord_Edit="Content:1"/>
+  <Place Parts_ThatRecord="Content:1"/>
+  <Match DisplayType="SummaryAdmin">
+    <Place Parts_ThatRecord="-"/>
+  </Match>
+</Placement>

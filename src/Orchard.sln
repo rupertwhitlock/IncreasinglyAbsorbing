@@ -134,6 +134,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contrib.HttpMp3Track", "Orc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mello.ImageGallery", "Orchard.Web\Modules\Mello.ImageGallery\Mello.ImageGallery.csproj", "{EACC1A53-532B-486B-BC51-BA65ACBA2B61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rupert.GetMeThatRecord", "Orchard.Web\Modules\Rupert.GetMeThatRecord\Rupert.GetMeThatRecord.csproj", "{77D8A9EB-DAE5-40C7-91FC-A69EA1F1FB1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeCoverage|Any CPU = CodeCoverage|Any CPU
@@ -143,6 +145,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77D8A9EB-DAE5-40C7-91FC-A69EA1F1FB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D8A9EB-DAE5-40C7-91FC-A69EA1F1FB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D8A9EB-DAE5-40C7-91FC-A69EA1F1FB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D8A9EB-DAE5-40C7-91FC-A69EA1F1FB1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50B779EA-EC00-4699-84C0-03B395C365D2}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
 		{50B779EA-EC00-4699-84C0-03B395C365D2}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
 		{50B779EA-EC00-4699-84C0-03B395C365D2}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
@@ -778,5 +784,6 @@ Global
 		{94E694A2-D140-468D-A277-C5FCE1D13E9B} = {3E10BF6D-ADA5-417D-B36C-EBB0660B475E}
 		{7354DF37-934B-46CF-A13C-455D5F5F5413} = {3E10BF6D-ADA5-417D-B36C-EBB0660B475E}
 		{CB70A642-8CEC-4DDE-8C9F-AD08900EC98D} = {74492CBC-7201-417E-BC29-28B4C25A58B0}
+		{77D8A9EB-DAE5-40C7-91FC-A69EA1F1FB1C} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 	EndGlobalSection
 EndGlobal
